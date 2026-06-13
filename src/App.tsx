@@ -1,13 +1,7 @@
-import TaxCalculator from "./components/Tax_slab"
-
-
+import TaxCalculator from './components/TaxCalculator'
 
 const App = () => {
-  return (
-    <div>
-      <TaxCalculator />
-    </div>
-  )
+  return <TaxCalculator />
 }
 
 export default App
