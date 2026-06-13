@@ -1,4 +1,4 @@
-import TaxCalculator from "./components'/Tax_slab"
+import TaxCalculator from "./components/Tax_slab"
 
 
 

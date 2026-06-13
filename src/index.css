@@ -64,6 +64,384 @@
 
 body {
   margin: 0;
+  background: #0a1628;
+}
+
+.tax-page {
+  min-height: 100vh;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  color: #e8f0fe;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: linear-gradient(135deg, #0a1628 0%, #0d2144 60%, #0a2e5c 100%);
+}
+
+.tax-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.tax-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 40px;
+  padding: 6px 18px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tax-badge-text {
+  font-size: 13px;
+  color: #7eb8f7;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.tax-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 6px;
+  background: linear-gradient(90deg, #60a5fa, #93c5fd, #bfdbfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.tax-subtitle {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.tax-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  border-radius: 20px;
+  padding: 24px 20px;
+  margin-bottom: 20px;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.tax-label {
+  display: block;
+  font-size: 13px;
+  color: #93c5fd;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.tax-input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.tax-input-wrap {
+  flex: 1;
+  position: relative;
+}
+
+.tax-currency {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #60a5fa;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.tax-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 14px 14px 36px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(96, 165, 250, 0.3);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  outline: none;
+}
+
+.tax-button {
+  padding: 0 22px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.tax-button:disabled {
+  background: rgba(255, 255, 255, 0.08);
+  color: #4b5563;
+  cursor: not-allowed;
+}
+
+.tax-annual {
+  margin: 10px 0 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.tax-results {
+  margin-bottom: 20px;
+  animation: fadeIn 0.4s ease;
+}
+
+.tax-banner {
+  background: linear-gradient(135deg, #1e3a5f, #1e40af);
+  border: 1px solid rgba(96, 165, 250, 0.4);
+  border-radius: 16px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tax-banner-label,
+.tax-banner-right-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+
+.tax-banner-label {
+  color: #93c5fd;
+}
+
+.tax-banner-value {
+  font-size: 36px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.tax-banner-note {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.tax-banner-right {
+  text-align: right;
+}
+
+.tax-banner-right-label {
+  color: #f87171;
+}
+
+.tax-banner-right-value {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fca5a5;
+}
+
+.tax-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tax-stat-card {
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+.tax-stat-card-red {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.tax-stat-card-amber {
+  background: rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+.tax-stat-card-emerald {
+  background: rgba(52, 211, 153, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+.tax-stat-card-blue {
+  background: rgba(96, 165, 250, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+.tax-stat-title {
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 600;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+.tax-stat-value {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.tax-stat-value-red {
+  color: #f87171;
+}
+
+.tax-stat-value-amber {
+  color: #fbbf24;
+}
+
+.tax-stat-value-emerald {
+  color: #34d399;
+}
+
+.tax-stat-value-blue {
+  color: #60a5fa;
+}
+
+.tax-slab-table {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.tax-slab-header {
+  background: rgba(37, 99, 235, 0.3);
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tax-slab-title {
+  font-weight: 700;
+  font-size: 14px;
+  color: #93c5fd;
+}
+
+.tax-slab-subtitle {
+  font-size: 11px;
+  color: #475569;
+}
+
+.tax-slab-row {
+  padding: 12px 18px;
+  transition: background 0.3s;
+}
+
+.tax-slab-row-divider {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tax-slab-row-last {
+  border-bottom: none;
+}
+
+.tax-slab-row-active {
+  background: rgba(37, 99, 235, 0.18);
+  border-left: 3px solid #3b82f6;
+}
+
+.tax-slab-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.tax-slab-label {
+  font-size: 13px;
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.tax-slab-label-active {
+  color: #bfdbfe;
+  font-weight: 700;
+}
+
+.tax-slab-arrow {
+  color: #60a5fa;
+  margin-right: 5px;
+}
+
+.tax-slab-rate {
+  font-size: 12px;
+  color: #64748b;
+  text-align: right;
+  flex: 0 0 auto;
+  max-width: 55%;
+}
+
+.tax-slab-rate-active {
+  color: #fde68a;
+}
+
+.tax-footer {
+  text-align: center;
+  font-size: 11px;
+  color: #334155;
+  margin-top: 16px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .tax-page {
+    padding: 18px 12px;
+  }
+
+  .tax-title {
+    font-size: 24px;
+  }
+
+  .tax-input-row,
+  .tax-banner,
+  .tax-slab-content {
+    display: block;
+  }
+
+  .tax-button {
+    width: 100%;
+    height: 48px;
+    margin-top: 10px;
+  }
+
+  .tax-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tax-banner-right {
+    margin-top: 12px;
+    text-align: left;
+  }
+
+  .tax-slab-rate {
+    text-align: left;
+    max-width: none;
+    margin-top: 6px;
+  }
+}
 }
 
 h1,
