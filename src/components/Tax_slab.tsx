@@ -1,4 +1,5 @@
 import {  useState } from "react"
+import AdBanner from './AdBanner';
 
 
 type TaxSlab = {
@@ -217,8 +218,8 @@ export default function TaxCalculator() {
           </div>
         ))}
       </div>
-
-      <p className="tax-footer">Source: Friends Consulting · Federal Budget 2026-27</p>
+            <AdBanner adSlot="1556060173" />
+      <p className="tax-footer">Source: Talha Rehman· Federal Budget 2026-27</p>
     </div>
 
     </>
